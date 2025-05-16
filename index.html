@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="imagens/key.ico">
+    <title>Sydoca</title>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <main>
+        <div>
+            <p>iK0hqY3nUpN_jqfynBBialw1sfhb19PGxOY2EoToeQwuaNlO4ZpKGnTROD3d0w2ZR-xjjoM01xjtph_cZs_ks2jQFuGPWFqI5IFmo1rRqE9DSK1eVV4N7m2IdQcxHl3Hf2I_i_W9hJ1gBeR29U3TGlJ8mvWwL7icTEeIk2Hl3T6UFdlwxBzwQHKEFPio-otTbGzSkCPTKM-yX3FBiNhQE-43_PSl06yLEOK25hEMvem_E6L_Tsu5xvO4x1bSTkxn7PUqZBjTCzC-z1tDJSEhDnr6pl1H3jrGLLg3N0g5YeN1CmTG4PDHMuNseA_kH27ucgNo46Sa13XFM4kIrvk0n7nxF8JcXxbGdu0jXnh29Ig6ISypUUPGxSV7FEYEDKd0Rw5DoWR9WMdpUmMmNoGTjPF_K7qRPdA-ZT8T9_7Kfo2PKamPAeYWlD0sIPMn-qozTt3jJNGE5b0iAZLYQYtEV-KwNuY5l0kyT20mUDmQnIAxRU9Hyt0AJdwzPQ8_1T_dPMQAyoKUFFOBDePnnQDR9Wcn_PPJDm5shrB4uYwrJ-T6YSqi0IDqRzbOReg5AwYr5rUTqYyDKd0bpzP84BSRIQSUV_IxSYkp2zXnYP8wm4SWGKl_4qawwyKBd55DEXiCJolm3B3v6tDy9_QkFcRB1k6iWIrnsi_w0nbPLEekkfDFtPLbw-gw_2wgfxQySGUsVBU2AaCm__kJm3WFERTDg7Bq4u07CMjIlnGyUtArdGK5iH6OqqN8P1ZXmQrVbhovk5bsin8t9gTfWlyu949pBKGO-j8uCU57q45jWylOUjzVv-JO0MHoxEFgjVW5ASPohgYwSxsQII8GVncmJmH9kNqHxByTauHd7IKk_NBvZNia4Aa64uWhUW4THuqr20hnWEiqHROhNDfiGWAXgsB6SKCfcW2UjCsL9up8HEdYd7b1LQu8GrqJBj16uCADhGqe_wtAt5xTJ-Z4ZfxjVsZc_VU-hCq4KngtpkEChOeFVz07V_L7d2SHCG8-IZbhUDCL17On-Z-HtEz2eL3vIRhZm-OS55VkeJNKIe4Mhr8c5KBKMaYvoFirMwh9ghdHniYb7WGrz5RdyPcMWNIHDC-S8_QEcp25ybWxJzP8uoOsA5EkYUBMmNBoxY_1SpFoMFt3g_8Qm5yHXm3E2Bc8pzmzgPiZ6-Ww3GqDQB5Y3lyrvueg_op0P88MUP-NWOdzJGHMsnkAglIr3SY03PYH83MPCDhC1d6Vu3ApWa3B7U4qzZkBexr1uVXMlSMIe3yAm99BAuWXmKOAmw13CtBqmMNUu9Kdb20qqi6MUmef-YPZs6pXGgHObKOtWbxx7DXOEDbzVB34sRDfV9NDHPbi58hJ0BmmltNKtazObnUF3-iISVtrR2zVTfOrrLnVIskQJVNT54VNb7P0oz-a4h3lkq0kMiCkH2jL-2DGO2FLzZ1T1E2hUjQM62Z8Uh8tyq7vhfs_zW2j1VLsRKhPvWOj3ccJL948CNCcU1Y6SbnpnwyxEyPpBOd22JxksPH_ftcTDn79YJweTCQyKI13q7OD4qmggiCeYiPXf9OM2BR2PSeAqdfvffNxyFysIDYu8MB7FRYUiHlFBChHJZ5Ux62pc_2wXzKzTfaP9T0Fo5jqGsAHO_1mZ-dK6zxRnXOgE686fZy3IrvRBjP0GIj8Yt1g-Y81brq_MzjRwBtBFA2wnRCNSPUOVdhUmqP-_kniiNNxmNF1ANATlFnWtSjvVNW4CAzG8lhIFmpMiip2g42neFwrF-ZTyAAMM0F9r2er-MALCx85KatkD_t0JS9h1D2ZP9Odrg</p>
+        </div>
+        <a href="https://www.invertexto.com/texto-criptografado" target="_blank">Feliz aniversario ;)</a>
+        <p>Você sabe a chave.</p>
+    </main>
+    <script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const letters = 'FELIZ ANIVERSARIO SYDOCA'.split('');
+    const fontSize = 18;
+    const columns = Math.floor(canvas.width / fontSize);
+    const drops = Array(columns).fill(1);
+
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.font = fontSize + "px monospace";
+        ctx.fillStyle = "rgba(0, 255, 65, 0.3)";
+        for (let i = 0; i < drops.length; i++) {
+            const text = letters[Math.floor(Math.random() * letters.length)];
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    }
+
+    setInterval(drawMatrix, 33);
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+    </script>
+</body>
+</html>
